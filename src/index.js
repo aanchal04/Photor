@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Main from './Main';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Single from './Single';
+import Photogrid from './Photogrid';
+import {Provider} from 'react-redux'
+import store , {history} from './store'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
+//import * as serviceWorker from './serviceWorker';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+//ReactDOM.render(<Main />, document.getElementById('root'));
+
+//serviceWorker.unregister();
+ReactDOM.render(
+    <Provider store = {store}>
+        <Router>
+              <div className = "OuterDiv">
+                <Route path="/" component={App}>
+                </Route>
+              </div>
+        </Router>
+    </Provider>,
+    document.getElementById('root'));
