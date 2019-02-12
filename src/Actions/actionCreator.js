@@ -21,3 +21,11 @@ export function deleteComment(postId , index){
         index
     }
 }
+
+export function addPost(postphotosrc , posttag){
+    return {
+        type : 'ADD_POST',
+        postphotosrc ,
+        posttag
+    }
+}

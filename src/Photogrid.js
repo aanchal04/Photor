@@ -14,6 +14,12 @@ class Photogrid extends Component {
  constructor(props) {
     super(props);
   }
+
+  componentDidMount()
+  {
+        document.getElementById("addpostid").style.display = "block"
+  }
+
   render() {
     const { classes } = this.props;
     return (

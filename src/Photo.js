@@ -31,14 +31,14 @@ const styles = theme => ({
       height: "7%",
       fontSize :"16px",
       fontFamily : "lato",
-      paddingLeft  : "3%",
+      paddingLeft  : "0%",
       color : "#525273"
   },
   actionslikediv : {
       display: "inline-block",
-      width: "30%",
+      width: "25%",
       height: "100%",
-      marginLeft : "9%",
+      marginLeft : "12%",
       paddingLeft  : "5%",
       boxShadow : "1px 1px #e4d9d9",
       lineHeight : 2,
@@ -46,7 +46,7 @@ const styles = theme => ({
   },
   actionscommentsdiv : {
       display: "inline-block",
-      width: "30%",
+      width: "25%",
       height: "100%",
       marginLeft : "4%",
       paddingLeft  : "5%",
@@ -62,17 +62,21 @@ const styles = theme => ({
 actionscommentsnumberdiv :{
       display: "inline-block",
       width: "50%",
-      height: "100%", 
+      height: "100%"
 },
 actionscommentsicondiv :{
       display: "inline-block",
-      width: "50%",
+      width: "38%",
       height: "100%",
+      "text-align" : "right",
+      paddingRight : "2px"
  },
 actionslikeicondiv :{
       display: "inline-block",
-      width: "50%",
+      width: "38%",
       height: "100%",
+      "text-align" : "right",
+      paddingRight : "2px"
 },
 imgouterDiv : {
     position : "relative"
@@ -87,7 +91,8 @@ class Photo extends Component {
     const { classes } = this.props;
     const data = this.props.data;
     const post = this.props.post;
-   // const post = this.props.data.posts[postid] 
+   // const post = this.props.data.posts[postid]
+    const comment = this.props.data.comments[post.postid]
     return (
       <div className={classes.Photo}>    
         <div className = {classes.imgouterDiv}>
@@ -120,7 +125,7 @@ class Photo extends Component {
                         <i className="fa fa-comment" aria-hidden="true"></i>
                     </div>
                 <div className = {classes.actionscommentsnumberdiv}>
-                            {post.comments}
+                            {comment.length}
                 </div>
             </div>
         </div>

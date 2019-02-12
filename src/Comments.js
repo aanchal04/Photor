@@ -76,8 +76,8 @@ class Comments extends Component {
       <div className={classes.Comments}>
             {comments.map(this.eachnote)}
         <form onSubmit = {this.submit}>
-            <input name = "user" type = "text" placeholder = "UserName"/><br></br>
-            <input name = "comment" type = "text" placeholder = "Comment"/>
+            <input name = "user" type = "text" placeholder = "Add Your Name"/><br></br>
+            <input name = "comment" type = "text" placeholder = "Add Your Comment"/>
             <input type="submit" hidden/>
         </form>
       </div>

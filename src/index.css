@@ -58,3 +58,9 @@ code {
 .likes-heart .like-leave-active {
 	display: none;
 }
+
+img
+{
+    width : 300px;
+    height: 250px;
+}

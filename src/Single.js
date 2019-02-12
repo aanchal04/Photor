@@ -12,6 +12,12 @@ const styles = theme => ({
 });
 
 class Single extends Component {
+
+    componentDidMount()
+    {
+        document.getElementById("addpostid").style.display = "none"
+    }
+
     render() {
     const { classes } = this.props;
     const i = this.props.location.pathname.split(':')[1]

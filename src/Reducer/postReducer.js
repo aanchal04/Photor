@@ -9,6 +9,13 @@ function posts(state = [] , action)
                     {...state[i],likes : state[i].likes + 1},
                     ...state.slice(i+1),
                 ]
+            case 'ADD_POST' : 
+                return [ ...state,{
+                postid : state.length,
+                postphotosrc : action.postphotosrc,
+                likes : 0,
+                posttag : action.posttag
+                }]
             default :
                 return state  
         }

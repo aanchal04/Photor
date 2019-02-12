@@ -86,6 +86,16 @@ const comments = {
       "comment":"Love this house during the holidays! And all other times of the year...",
       "user": "danielleplas"
     }
+  ],
+  "6":[
+    {
+      "comment":"Where's lux at? 💤?",
+      "user": "henrihelvetica"
+    },
+    {
+      "comment":"Love this house during the holidays! And all other times of the year...",
+      "user": "danielleplas"
+    }
   ]
 };
 
