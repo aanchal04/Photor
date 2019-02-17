@@ -8,6 +8,7 @@ import { compose } from 'redux';
 import {Provider} from 'react-redux'
 import store , {history} from './store'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const styles = theme => ({
   mainContainer : {
@@ -18,7 +19,8 @@ const styles = theme => ({
    headerContainer : {
       display: "inline-block",
       width: "100%",
-      height: "10%"
+      height: "8%",
+      "float" : "left",
   },
   bodyContainer : {
       display: "inline-block",
@@ -26,13 +28,17 @@ const styles = theme => ({
       height: "90%"
   },
   headerText : {
-     fontSize : "45px",
+     fontSize : "42px",
      fontFamily : "roboto",
      textAlign : "center",
      fontWeight : "bold",
      color : "#ce8f8f",
-     lineHeight : "1.5",
-     paddingLeft : "10%"
+     lineHeight : "1.3",
+     paddingLeft : "10%",
+     width: "100%",
+     height: "100%",
+     display: "inline-block",
+     "float" : "left",
   },
   addpost : {
      fontSize : "18px",
@@ -44,7 +50,7 @@ const styles = theme => ({
      display: "inline-block",
      width: "8%",
      height: "100%",
-     float : "right",
+     "float" : "right",
      marginTop : "2%",
      border : "1px solid",
      marginRight : "3%"
@@ -200,8 +206,7 @@ class Main extends Component {
                             <span> Instagram </span>
                         </Link>
                     </Route>
-                    <div className={classes.addpost} onClick = {this.addPostonClick} id = "addpostid">                        
-                            <i className ="fa fa-plus" aria-hidden="true"></i> 
+                    <div className="btn btn-primary" onClick = {this.addPostonClick} id = "addpostid">                        
                             <span> Add Post </span>                           
                     </div>
                 </div>

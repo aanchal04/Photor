@@ -12,8 +12,19 @@ const styles = theme => ({
       height: "60%",
       marginLeft : "5%",
       marginRight : "3%",
-      float : "left",
-      marginTop : "2%"
+      marginTop : "1%",
+      "margin-bottom" : "1%",
+      background : "linear-gradient(to bottom, #ece9e6, #fafafa)",
+      "float" : "left",
+      "text-align" : "center",
+      "text-decoration": "none",
+      "-webkit-box-shadow": "0 4px 6px rgba(0, 0, 0, .3)",
+      "-moz-box-shadow" : "0 4px 6px rgba(0,0,0,.3)",
+      "box-shadow" : "0 4px 6px rgba(0,0,0,.3)",
+      "-webkit-transition" : "all .15s linear",
+      "-moz-transition" : "all .15s linear",
+      "transition" : "all .15s linear",
+      "z-index" : "0",
   },
   imgdiv : {
       display: "inline-block",
@@ -28,11 +39,14 @@ const styles = theme => ({
    postMessagediv : {
       display: "inline-block",
       width: "100%",
-      height: "7%",
+      height: "14%",
       fontSize :"16px",
       fontFamily : "lato",
       paddingLeft  : "0%",
-      color : "#525273"
+      color : "#525273",
+      "border-bottom": "1px solid #80808038",
+      "border-bottom-left-radius": "300px",
+      "border-bottom-right-radius": "300px",
   },
   actionslikediv : {
       display: "inline-block",
@@ -66,20 +80,38 @@ actionscommentsnumberdiv :{
 },
 actionscommentsicondiv :{
       display: "inline-block",
-      width: "38%",
-      height: "100%",
-      "text-align" : "right",
-      paddingRight : "2px"
+      width: "11%",
+      height: "10%",
+      "float" : "left",
+      marginTop : "-16px",
+      "z-index" : "1",
+      position : "relative",
+      background: "white",
+      "border-radius" : "128px",
+      "line-height" : "1.9",
+      border : "1px solid #a79c9c",
+      "margin-left" : "5%",
+      "cursor" : "pointer"
  },
 actionslikeicondiv :{
       display: "inline-block",
-      width: "38%",
-      height: "100%",
-      "text-align" : "right",
-      paddingRight : "2px"
+      width: "11%",
+      height: "10%",
+      "float" : "left",
+      marginTop : "-16px",
+      "margin-left": "35%",
+      "z-index" : "1",
+      color : "red",
+      position : "relative",
+      background: "white",
+      "border-radius" : "128px",
+      "line-height" : "2",
+      border : "1px solid #a79c9c",
+      "cursor" : "pointer"
 },
 imgouterDiv : {
-    position : "relative"
+    position : "relative",
+    "padding-top" : "5%"
 }
 });
 
@@ -111,23 +143,11 @@ class Photo extends Component {
         <div className = {classes.postMessagediv}>
             <span> {post.posttag} </span>
         </div>   
-        <div className = {classes.actionsdiv}>     
-            <div className = {classes.actionslikediv}>
-                <div  key = {post.likes} onClick = {data.increment.bind(null , post.postid)} className = {classes.actionslikeicondiv}>
-                    <i className ="fa fa-heart-o" aria-hidden="true"></i>
-                </div>
-                <div className = {classes.actionslikenumberdiv}>
-                    {post.likes}
-                </div>
-                </div>
-                <div className = {classes.actionscommentsdiv}>
-                    <div onClick = {data.addComment} className = {classes.actionscommentsicondiv}>
-                        <i className="fa fa-comment" aria-hidden="true"></i>
-                    </div>
-                <div className = {classes.actionscommentsnumberdiv}>
-                            {comment.length}
-                </div>
-            </div>
+        <div  key = {post.likes} onClick = {data.increment.bind(null , post.postid)} className = {classes.actionslikeicondiv}>
+            <i className ="fa fa-heart fa_custom fa-1x" aria-hidden="true"></i>
+        </div>
+        <div onClick = {data.addComment} className = {classes.actionscommentsicondiv}>
+            <i className="fa fa-comment" aria-hidden="true"></i>
         </div>
       </div>
     );

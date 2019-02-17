@@ -21,7 +21,11 @@ const styles = theme => ({
       display: "inline-block",
       paddingLeft: "1%",
       height: "100%",
-      float : "left",
+      "float" : "left",
+      "white-space": "nowrap",
+      "text-overflow": "ellipsis",
+      "overflow" : "hidden",
+      "max-width": "15%",
       color : "#4545ea",
       fontSize : "14px",
       fontFamily : "lato"     
@@ -32,7 +36,11 @@ const styles = theme => ({
       fontSize : "14px",
       fontFamily : "lato" ,
       paddingLeft: "2%",
-      float : "left"
+      "float" : "left",
+      "white-space": "nowrap",
+      "text-overflow": "ellipsis",
+      "overflow" : "hidden",
+      "max-width": "85%",
  }
 });
 

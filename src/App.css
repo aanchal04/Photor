@@ -1,3 +1,15 @@
 #idUploadDiv{
   margin-left: 25%
 }
+
+#addpostid{
+    display: block;
+    width: 9%;
+    height: 60%;
+    float: right;
+    margin-top: 1.5%;
+    margin-right: 2%;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+}
